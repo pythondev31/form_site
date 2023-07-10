@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<!-- Mirrored from colorlib.com/etc/tb/Table_Responsive_v1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Jun 2021 09:55:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>Table V01</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'table/images/icons/favicon.ico'%}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'table/vendor/bootstrap/css/bootstrap.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'table/fonts/font-awesome-4.7.0/css/font-awesome.min.css'%} ">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'table/vendor/animate/animate.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'table/vendor/select2/select2.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'table/vendor/perfect-scrollbar/perfect-scrollbar.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'table/css/util.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'table/css/main.css'%}">
+<!--===============================================================================================-->
+<meta name="robots" content="noindex, follow">
+</head>
+<body>
+{#{% extends 'form.html' %}#}
+    {% block content %}
+
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">ID</th>
+								<th class="column1">First Name</th>
+								<th class="column2">Last Name</th>
+								<th class="column3">Email</th>
+								<th class="column1">Phone Number</th>
+								<th class="column6">Message</th>
+							</tr>
+						</thead>
+						<tbody>
+						{%for i in customers%}
+								<tr>
+									<td class="column1">{{i.id}}</td>
+									<td class="column1">{{i.first_name}}</td>
+									<td class="column2">{{i.last_name}}</td>
+									<td class="column3">{{i.email}}</td>
+									<td class="column1">{{i.phone_number}}</td>
+									<td class="column6">{{i.message}}</td>
+
+								</tr>
+						{%endfor%}
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+ {% endblock %}
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+
+<script defer src="../../../../static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"660b676b3c800004","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.5.2","si":10}'></script>
+</body>
+
+<!-- Mirrored from colorlib.com/etc/tb/Table_Responsive_v1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Jun 2021 09:55:49 GMT -->
+</html>
